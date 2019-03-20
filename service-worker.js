@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chess-board-react-dnd/precache-manifest.04679240d0cb978794c8fb821a18bcb3.js"
+  "/chess-board-react-dnd/precache-manifest.7ecd372c5a49fbc8ba5118abcfd19524.js"
 );
 
 workbox.clientsClaim();
