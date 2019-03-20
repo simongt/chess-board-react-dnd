@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Board from "../chess-board/Board";
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,8 @@ class Main extends Component {
           alignItems: "center",
         }}
       >
-        <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2>
+        {/* <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2> */}
+        <Board />
       </div>
     );
   }
