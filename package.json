@@ -2,7 +2,9 @@
   "name": "chess-board",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://simongt.github.io/chess-board-react-dnd/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-dnd": "^7.3.2",
     "react-dnd-html5-backend": "^7.2.0",
