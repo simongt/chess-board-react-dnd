@@ -1,64 +1,64 @@
-export const iconSet = [{
+export const iconSet = {
   pawn: {
-    white: {
+    outline: {
       icon: "♙",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♟",
       position: { x: 0, y: 0 }
     }
   },
   rook: {
-    white: {
+    outline: {
       icon: "♖",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♜",
       position: { x: 0, y: 0 }
     }
   },
   knight: {
-    white: {
+    outline: {
       icon: "♘",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♞",
       position: { x: 0, y: 0 }
     }
   },
   bishop: {
-    white: {
+    outline: {
       icon: "♗",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♝",
       position: { x: 0, y: 0 }
     }
   },
   queen: {
-    white: {
+    outline: {
       icon: "♕",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♛",
       position: { x: 0, y: 0 }
     }
   },
   king: {
-    white: {
+    outline: {
       icon: "♔",
       position: { x: 0, y: 0 }
     },
-    black: {
+    fill: {
       icon: "♚",
       position: { x: 0, y: 0 }
     }
-  },
-}];
+  }
+};
 
 export default { iconSet };
