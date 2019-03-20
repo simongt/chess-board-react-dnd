@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  /* user-select: none; */
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background: hsla(256, 75%, 25%, 1);
+  background-image:
+    linear-gradient(to bottom right,
+    hsla(15, 75%, 55%, 1),
+    hsla(345, 75%, 55%, 1),
+    hsla(256, 66%, 50%, 1),
+    hsla(256, 75%, 25%, 1));
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
