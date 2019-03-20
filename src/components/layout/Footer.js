@@ -20,12 +20,12 @@ class Footer extends Component {
       >
         <p style={{ fontSize: "1em", textTransform: "uppercase" }}>
           <a
-            href="https://github.com/simongt/"
+            href="https://github.com/simongt/chess-board-react-dnd"
             target="_blank"
             rel="noopener noreferrer"
             style={hrefFooter}
           >
-            {"React App"}
+            {"Chess Board (React-DnD)"}
           </a>
         </p>
         <p style={{ fontSize: "1em", textTransform: "uppercase" }}>

@@ -17,7 +17,7 @@ class Main extends Component {
           justifyContent: "center",
           alignContent: "center",
           justifyItems: "center",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2>

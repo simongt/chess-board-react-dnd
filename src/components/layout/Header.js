@@ -22,7 +22,7 @@ class Header extends Component {
             textShadow: "4px 4px 2px rgba(0, 0, 0, 1)"
           }}
         >
-          {"React App"}
+          {"Chess Board"}
         </h1>
       </header>
     )
