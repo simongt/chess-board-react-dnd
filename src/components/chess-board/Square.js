@@ -6,9 +6,9 @@ import React, { Component } from "react";
 
 class Square extends Component {
   render() {
-    const { blue, children } = this.props;
-    const fill = blue ? "hsla(240, 66%, 33%, 1)" : "hsla(25, 75%, 60%, 1)";
-    const stroke = blue ? "hsla(25, 75%, 60%, 1)" : "hsla(240, 66%, 33%, 1)";
+    const { black, children } = this.props;
+    const fill = black ? "hsla(240, 66%, 15%, 1)" : "hsla(25, 75%, 60%, 1)";
+    const stroke = black ? "hsla(25, 75%, 60%, 1)" : "hsla(240, 66%, 15%, 1)";
     const squareStyle={
       zIndex: "2",
       background: fill,

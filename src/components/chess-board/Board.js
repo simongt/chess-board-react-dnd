@@ -21,7 +21,7 @@ class Board extends Component {
     };
     return (
       <div style={boardStyle}>
-        <Square blue>
+        <Square black>
           <Knight />
         </Square>
         <Square>
