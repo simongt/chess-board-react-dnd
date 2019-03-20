@@ -1,4 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Chess Board (React DnD Example)
+
+| In this app, I use <a href="http://react-dnd.github.io/react-dnd">React DnD</a> to build a simplified chess board with a lonely knight, based off of <a href="http://react-dnd.github.io/react-dnd/docs/tutorial">this tutorial</a>. |
+|:-|
+
+<p align="center">
+  <a href="">
+    <img src="./public/img/chess-board-preview.gif" alt="Chess Board" />
+  </a>
+</p>
+
+---
+
+## React DND
+
+<details>
+<summary>
+Notes from <a href="https://www.youtube.com/watch?v=930JPFaKg-s">Andre Madarang's tutorial video</a>.
+</summary>
+<ul>
+<li>
+Install dependencies:<br>
+<code>npm install --save react-dnd react-dnd-html5-backend</code>
+</li>
+<li>
+Three prereqs for this library to work:
+<ol>
+<li>
+Define a context which wraps the entire app and tells the app that things are <em>draggable</em>.
+</li>
+<li>
+Define which things are <em>draggable</em> (i.e. <strong>sources</strong>).
+</li>
+<li>
+Define which things are <em>droppable</em> (i.e. <strong>targets</strong>).
+</li>
+</ol>
+</li>
+</ul>
+</details>
+
+---
+
+## Dependencies
+
+| API | Description |
+|:-|:-|
+| [gh-pages](https://pages.github.com/) | Deployment tool that publishes GitHub repo as a static website directly to GitHub Pages. |
+| [react-dnd](https://react-dnd.github.io/react-dnd/) | Set of higher-order components for React that help build complex drag-and-drop interfaces. |
+| [react-dnd-html5-backend](http://react-dnd.github.io/react-dnd/docs/backends/html5) | Official HTML5 backend for React DnD. [No longer a required peer dependency](https://github.com/react-dnd/react-dnd/releases/tag/v4.0.6) as it is currently legacy and has been integrated into [react-dnd](https://react-dnd.github.io/react-dnd/). |
+| [react-dnd-touch-backend](https://github.com/yahoo/react-dnd-touch-backend) | Touch back-end for [react-dnd](https://react-dnd.github.io/react-dnd/) (since native drag-and-drop is not currently supported in touch devices). |
+
+<details>
+<summary>This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">Create React App</a>.
+</summary><br>
 
 ## Available Scripts
 
@@ -19,8 +73,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for ptoweruction to the `build` folder.<br>
+It correctly bundles React in ptoweruction mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
@@ -66,3 +120,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+</details>
