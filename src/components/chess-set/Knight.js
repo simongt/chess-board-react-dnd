@@ -21,9 +21,7 @@ class Knight extends Component {
     const {
       icon
     } = this.state;
-    const chessPieceStyle = {
-      zIndex: "3",
-    };
+    const chessPieceStyle = {};
     return (
       <span style={chessPieceStyle}>{`${icon}`}</span>
     );
