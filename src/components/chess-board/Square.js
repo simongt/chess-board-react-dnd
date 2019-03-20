@@ -10,7 +10,6 @@ class Square extends Component {
     const fill = black ? "hsla(240, 66%, 15%, 1)" : "hsla(25, 75%, 60%, 1)";
     const stroke = black ? "hsla(25, 75%, 60%, 1)" : "hsla(240, 66%, 15%, 1)";
     const squareStyle={
-      zIndex: "2",
       background: fill,
       color: stroke,
       textShadow: `0px 0px 0px ${stroke}`,
