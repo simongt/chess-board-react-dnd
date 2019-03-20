@@ -8,8 +8,17 @@ class Main extends Component {
   }
   render() {
     return (
-      <div>
-
+      <div
+        className="Main"
+        style={{
+          display: "grid",
+          justifyContent: "center",
+          alignContent: "center",
+          justifyItems: "center",
+          alignItems: "center"
+        }}
+      >
+        <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2>
       </div>
     );
   }
