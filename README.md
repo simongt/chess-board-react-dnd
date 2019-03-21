@@ -1,6 +1,6 @@
-# Chess Board (React DnD Example)
+# React Drag & Drop: Chess Board
 
-| In this app, I use <a href="http://react-dnd.github.io/react-dnd">React DnD</a> to build a simplified chess board with a lonely knight, based off of <a href="http://react-dnd.github.io/react-dnd/docs/tutorial">this tutorial</a>. |
+| In this app, I explore the drag-and-drop capabilities of <a href="http://react-dnd.github.io/react-dnd">React DnD</a> while using React and CSS Grid to build a simplified chess board containing a single set of pieces. This project was initially inspired by <a href="http://react-dnd.github.io/react-dnd/docs/tutorial">Dan Abramov's tutorial</a> (i.e. React DnD's creator), where a lonely knight roams about the chess board freely. One of my goals is to implement drag-and-drop capabilities for all of the knight's buddies so they too can roam about. |
 |:-|
 
 <p align="center">
@@ -8,36 +8,6 @@
     <img src="./public/img/chess-board-preview.gif" alt="Chess Board" />
   </a>
 </p>
-
----
-
-## React DND
-
-<details>
-<summary>
-Notes from <a href="https://www.youtube.com/watch?v=930JPFaKg-s">Andre Madarang's tutorial video</a>.
-</summary>
-<ul>
-<li>
-Install dependencies:<br>
-<code>npm install --save react-dnd react-dnd-html5-backend</code>
-</li>
-<li>
-Three prereqs for this library to work:
-<ol>
-<li>
-Define a context which wraps the entire app and tells the app that things are <em>draggable</em>.
-</li>
-<li>
-Define which things are <em>draggable</em> (i.e. <strong>sources</strong>).
-</li>
-<li>
-Define which things are <em>droppable</em> (i.e. <strong>targets</strong>).
-</li>
-</ol>
-</li>
-</ul>
-</details>
 
 ---
 
