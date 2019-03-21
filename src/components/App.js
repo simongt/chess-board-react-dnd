@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { DragDropContextProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
-
 import Header from "./layout/Header";
 import Main from "./layout/Main";
 import Footer from "./layout/Footer";
-
 import "../stylesheets/global.css";
 
 class App extends Component {
