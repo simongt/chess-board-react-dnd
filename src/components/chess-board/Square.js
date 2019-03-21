@@ -13,8 +13,7 @@ class Square extends Component {
       background: fill,
       color: stroke,
       textShadow: `0px 0px 0px ${stroke}`,
-      width: "100%",
-      height: "100%",
+      textAlign: "center",
     };
     return (
       <div style={squareStyle}>
