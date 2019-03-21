@@ -1,63 +1,27 @@
 export const iconSet = {
   pawn: {
-    outline: {
-      icon: "♙",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♟",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♙" },
+    fill: { icon: "♟" }
   },
   rook: {
-    outline: {
-      icon: "♖",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♜",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♖" },
+    fill: { icon: "♜" }
   },
   knight: {
-    outline: {
-      icon: "♘",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♞",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♘" },
+    fill: { icon: "♞" }
   },
   bishop: {
-    outline: {
-      icon: "♗",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♝",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♗" },
+    fill: { icon: "♝" }
   },
   queen: {
-    outline: {
-      icon: "♕",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♛",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♕" },
+    fill: { icon: "♛" }
   },
   king: {
-    outline: {
-      icon: "♔",
-      position: { x: 0, y: 0 }
-    },
-    fill: {
-      icon: "♚",
-      position: { x: 0, y: 0 }
-    }
+    outline: { icon: "♔" },
+    fill: { icon: "♚" }
   }
 };
 
