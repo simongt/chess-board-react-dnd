@@ -23,7 +23,7 @@ class Main extends Component {
         }}
       >
         {/* <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2> */}
-        <Board />
+        <Board piecePosition={[2,7]} />
       </div>
     );
   }
