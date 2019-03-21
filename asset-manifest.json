@@ -1,13 +1,13 @@
 {
   "main.css": "/chess-board-react-dnd/static/css/main.adf6dc4c.chunk.css",
-  "main.js": "/chess-board-react-dnd/static/js/main.0482f57e.chunk.js",
-  "main.js.map": "/chess-board-react-dnd/static/js/main.0482f57e.chunk.js.map",
+  "main.js": "/chess-board-react-dnd/static/js/main.b5ef8916.chunk.js",
+  "main.js.map": "/chess-board-react-dnd/static/js/main.b5ef8916.chunk.js.map",
   "runtime~main.js": "/chess-board-react-dnd/static/js/runtime~main.cff7d053.js",
   "runtime~main.js.map": "/chess-board-react-dnd/static/js/runtime~main.cff7d053.js.map",
   "static/js/2.a4973b2f.chunk.js": "/chess-board-react-dnd/static/js/2.a4973b2f.chunk.js",
   "static/js/2.a4973b2f.chunk.js.map": "/chess-board-react-dnd/static/js/2.a4973b2f.chunk.js.map",
   "index.html": "/chess-board-react-dnd/index.html",
-  "precache-manifest.926dd1a6a12c658da0aed9cdaf61afb9.js": "/chess-board-react-dnd/precache-manifest.926dd1a6a12c658da0aed9cdaf61afb9.js",
+  "precache-manifest.69ded6d11b90be842b1db0d1ced63117.js": "/chess-board-react-dnd/precache-manifest.69ded6d11b90be842b1db0d1ced63117.js",
   "service-worker.js": "/chess-board-react-dnd/service-worker.js",
   "static/css/main.adf6dc4c.chunk.css.map": "/chess-board-react-dnd/static/css/main.adf6dc4c.chunk.css.map"
 }
