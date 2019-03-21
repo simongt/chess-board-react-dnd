@@ -30,3 +30,6 @@ body {
   min-width: 100vw;
   max-width: 100vw;
 }
+
+/* set vertical breakpoint at 850px, remove header entirely */
+/* set horizontal breakpoint at 560px, resize board and header, consolidate footer */
