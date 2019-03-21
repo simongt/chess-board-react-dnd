@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Board from "../chess-board/Board";
+import { initPositions } from "../chess-set/IconSet";
 
 class Main extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Main extends Component {
         }}
       >
         {/* <h2 style={{fontSize: "10vw"}}>{"🤓👋🌎"}</h2> */}
-        <Board piecePosition={[2,7]} />
+        <Board piecePosition={initPositions.knight1.position} />
       </div>
     );
   }
