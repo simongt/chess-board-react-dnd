@@ -37,7 +37,7 @@ export const iconSet = {
   }
 };
 
-export const initPositions = {
+export const initBoard = {
   pawn1: {
     position: [0, 1],
     icon: {
@@ -152,4 +152,4 @@ export const initPositions = {
   },
 };
 
-export default { iconSet, initPositions };
+export default { iconSet, initBoard };
