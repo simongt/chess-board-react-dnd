@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b5bebfa78ac3bd199154",
+    "revision": "51bfe978586fdbee3255",
     "url": "/chess-board-react-dnd/static/css/main.cce3a4a3.chunk.css"
   },
   {
-    "revision": "b5bebfa78ac3bd199154",
-    "url": "/chess-board-react-dnd/static/js/main.b5ef8916.chunk.js"
+    "revision": "51bfe978586fdbee3255",
+    "url": "/chess-board-react-dnd/static/js/main.35ff4d28.chunk.js"
   },
   {
     "revision": "9fc0e1fc61c6504b4116",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/chess-board-react-dnd/static/js/2.a4973b2f.chunk.js"
   },
   {
-    "revision": "9fb8909e27bebb80b8e5addce79ec22e",
+    "revision": "66917782067d8b054333c0e86e4b1954",
     "url": "/chess-board-react-dnd/index.html"
   }
 ];
