@@ -31,11 +31,9 @@ const renderSquare = (boardPosition, [pieceCol, pieceRow]) => {
   );
 }
 
-const piecePosition = [2, 7]; // scale for one set of pieces per player
-
 class Board extends Component {
   render() {
-    // const { piecePosition } = this.props;
+    const { piecePosition } = this.props;
     const squares = [];
     for (let i = 0; i < 64; i++) {
       squares.push(renderSquare(i, piecePosition));

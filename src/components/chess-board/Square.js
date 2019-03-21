@@ -7,8 +7,8 @@ import React, { Component } from "react";
 class Square extends Component {
   render() {
     const { black, children } = this.props;
-    const fill = black ? "hsla(240, 66%, 15%, 1)" : "hsla(25, 75%, 60%, 1)";
-    const stroke = black ? "hsla(25, 75%, 60%, 1)" : "hsla(240, 66%, 15%, 1)";
+    const fill = black ? "hsla(240, 66%, 10%, 1)" : "hsla(25, 75%, 90%, 1)";
+    const stroke = black ? "hsla(25, 75%, 90%, 1)" : "hsla(240, 66%, 10%, 1)";
     const squareStyle={
       background: fill,
       color: stroke,
