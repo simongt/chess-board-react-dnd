@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import Square from "./Square";
-import Knight from "../chess-set/Knight";
+// import Knight from "../chess-set/Knight";
+import Piece from "../chess-set/Piece";
 
 /**
  * The Board is tricky. It makes no sense to pass Squares as children to it, because what else could a board contain? 
@@ -12,31 +13,46 @@ import Knight from "../chess-set/Knight";
  */
 
 // helper function to generate squares and pieces within it
-const renderSquare = (boardPosition, [pieceCol, pieceRow]) => {
-  // square board with 8 columns and 8 rows
+const renderSquare = (boardPosition, pieces) => {
   const col = boardPosition % 8;
   const row = Math.floor(boardPosition / 8);
-  // more often than not, it seems the convention for the board's first square to be white, therefore (1 + 1) % 2 === 1 is false, thus not black.
-  const black = (col + row) % 2 === 1;
-  const pieceIsHere = (pieceCol === col) && (pieceRow === row);
-  const piece = pieceIsHere ? <Knight /> : null;
+  const blackSquare = (col + row) % 2 === 1;
+  // const pieceIsHere = (pieceCol === col) && (pieceRow === row);
+  // console.dir(pieces);
+  let pieceOnSquare = null;
+  const pieceIsHere = pieces.some(piece => {
+    const pieceCol = piece.position[0];
+    const pieceRow = piece.position[1];
+    pieceOnSquare = pieceCol === col && pieceRow === row ? piece : null;
+    return (pieceCol === col && pieceRow === row);
+  });
+  // const piece = pieceIsHere ? <Knight /> : null;
+  const piece = pieceIsHere ? <Piece icon={pieceOnSquare.icon.fill} /> : null;
   return (
     <Square
       key={boardPosition}
       style={{ width: "100%", height: "100%" }}
-      black={black}
+      blackSquare={blackSquare}
     >
       {piece}
     </Square>
   );
 }
 
+// map thru initBoard and render out the squares with appropriate pieces on top
+
 class Board extends Component {
   render() {
-    const { piecePosition } = this.props;
+    const { initBoard } = this.props;
+    // console.dir(initBoard);
     const squares = [];
+    const pieces = [];
+    for (const piece in initBoard) {
+      pieces.push(initBoard[piece]);
+    };
+    
     for (let i = 0; i < 64; i++) {
-      squares.push(renderSquare(i, piecePosition));
+      squares.push(renderSquare(i, pieces));
     }
     return (
       <div style={boardStyle}>

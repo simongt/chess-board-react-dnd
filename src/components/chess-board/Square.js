@@ -6,20 +6,25 @@ import React, { Component } from "react";
 
 class Square extends Component {
   render() {
-    const { black, children } = this.props;
-    const fill = black ? "hsla(240, 66%, 10%, 1)" : "hsla(25, 75%, 90%, 1)";
-    const stroke = black ? "hsla(25, 75%, 90%, 1)" : "hsla(240, 66%, 10%, 1)";
-    const squareStyle={
+    const { blackSquare, children } = this.props;
+
+    const fill = blackSquare
+      ? "hsla(240, 66%, 10%, 1)"
+      : "hsla(25, 75%, 90%, 1)";
+
+    // const stroke = blackSquare
+      // ? "hsla(25, 75%, 90%, 1)"
+      // : "hsla(240, 66%, 10%, 1)";
+
+    // color shouldn't depend on square, but which player the piece belongs to, doesn't make sense to change entire color, just add an outline to the piece
+    const squareStyle = {
       background: fill,
-      color: stroke,
-      textShadow: `0px 0px 0px ${stroke}`,
-      textAlign: "center",
+      color: "black",
+      WebkitTextStroke: "1px hsla(25, 75%, 90%, 1)",
+      textAlign: "center"
     };
-    return (
-      <div style={squareStyle}>
-        {children}
-      </div>
-    );
+
+    return <div style={squareStyle}>{children}</div>;
   }
 }
 
