@@ -13,7 +13,7 @@ class Knight extends Component {
 
   componentDidMount() {
     this.setState(prevState => ({
-      icon: iconSet.knight.fill.icon
+      icon: iconSet.knight.icon.fill
     }));
   }
 
