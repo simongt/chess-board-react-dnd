@@ -12,15 +12,15 @@ class Square extends Component {
       ? "hsla(240, 66%, 10%, 1)"
       : "hsla(25, 75%, 90%, 1)";
 
-    // const stroke = blackSquare
-      // ? "hsla(25, 75%, 90%, 1)"
-      // : "hsla(240, 66%, 10%, 1)";
+    const stroke = blackSquare
+      ? "hsla(25, 75%, 90%, 1)"
+      : "hsla(240, 66%, 10%, 1)";
 
     // color shouldn't depend on square, but which player the piece belongs to, doesn't make sense to change entire color, just add an outline to the piece
     const squareStyle = {
       background: fill,
-      color: "black",
-      WebkitTextStroke: "1px hsla(25, 75%, 90%, 1)",
+      color: "transparent",
+      WebkitTextStroke: `1px ${stroke}`,
       textAlign: "center"
     };
 
