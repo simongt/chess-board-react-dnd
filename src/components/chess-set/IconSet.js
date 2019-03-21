@@ -1,10 +1,10 @@
 export const iconSet = {
-  pawn: {
-    icon: {
-      fill: "♟",
-      outline: "♙"
-    }
-  },
+  // pawn: {
+  //   icon: {
+  //     fill: "♟",
+  //     outline: "♙"
+  //   }
+  // },
   rook: {
     icon: {
       fill: "♜",
@@ -38,62 +38,62 @@ export const iconSet = {
 };
 
 export const initBoard = {
-  pawn1: {
-    position: [0, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn2: {
-    position: [1, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn3: {
-    position: [2, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn4: {
-    position: [3, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn5: {
-    position: [4, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn6: {
-    position: [5, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn7: {
-    position: [6, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
-  pawn8: {
-    position: [7, 1],
-    icon: {
-      fill: iconSet.pawn.icon.fill,
-      outline: iconSet.pawn.icon.outline,
-    }
-  },
+  // pawn1: {
+  //   position: [0, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn2: {
+  //   position: [1, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn3: {
+  //   position: [2, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn4: {
+  //   position: [3, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn5: {
+  //   position: [4, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn6: {
+  //   position: [5, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn7: {
+  //   position: [6, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
+  // pawn8: {
+  //   position: [7, 1],
+  //   icon: {
+  //     fill: iconSet.pawn.icon.fill,
+  //     outline: iconSet.pawn.icon.outline,
+  //   }
+  // },
   rook1: {
     position: [0, 0],
     icon: {
