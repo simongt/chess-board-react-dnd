@@ -2,7 +2,21 @@ import React, { Component } from "react";
 import Board from "./chess-board/Board";
 
 let knightPosition = [1, 7];
+
 let observer = null;
+
+// wrap entire app in an observer to subscribe to a changing state in the most minimal, non-complex way (rather than using EventEmitter or making Game an object model), all that is needed in this case is a stream of values
+export const observe = o => {
+  if (observer) {
+    throw new Error("Multiple observers not implemented.");
+  }
+  observer = o;
+  emitChange();
+};
+
+const emitChange = () => {
+  observer(knightPosition);
+};
 
 // check that knight moves in L shapes (according to the rules of chess)
 export const isValidKnightMove = (toX, toY) => {
@@ -17,18 +31,6 @@ export const isValidKnightMove = (toX, toY) => {
 export const moveKnight = (toX, toY) => {
   knightPosition = [toX, toY];
   emitChange();
-};
-
-export const observe = o => {
-  if (observer) {
-    throw new Error("Multiple observers not implemented.");
-  }
-  observer = o;
-  emitChange();
-};
-
-const emitChange = () => {
-  observer(knightPosition);
 };
 
 class Game extends Component {
