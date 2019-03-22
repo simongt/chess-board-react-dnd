@@ -16,7 +16,27 @@ This app was initially inspired by and adapted from <a href="http://react-dnd.gi
 
 ---
 
-## Dependencies
+## Identify components and consider props.
+
+| Components | Description | Props |
+|:-|:-|:-|
+| **`Knight`** (class) | A single knight piece. | Probably needs no props. There's no need for it to be aware of its own position since it'll be placed into `Square` as a child. |
+| **`Square`** (functional) | A single square on the board. | Probably just **`color`** (alternating in white and black), as it is the only value needed for rendering. It's not necessary to give position via props.
+| **`Board`** (functional) | The entire 8x8 board with 64 total squares. | `Board` only consists of `Square` components, therefore instead of passing `Square` components to `Board` as children, `Board` would probably just own them. This means `Board` would then need `Knight`'s **current position**, a two-item array with a column (**`x`**) and row (**`y`**) position. |
+
+### Where will the current state live?
+
+If it can be helped, not `Board`. It's a good idea to have as little state in components as possible. Since `Board` will already have some layout logic, it's best to not burden it with managing state. However, for this simple demo, it's rather trivial at this point. Let's assume state exists *somewhere* and think about it later. Meanwhile, let's make sure the components render correctly when they receive said state via props.
+
+### Add the state.
+
+The goal is to make `Knight` draggable. This requires maintaining `knightPosition` in some kind of state storage and having some way to update it.
+
+React is not opinionated about the state management or the data flow (e.g. Flux, Redux, Rx).
+
+---
+
+# Dependencies
 
 | API | Description |
 |:-|:-|
