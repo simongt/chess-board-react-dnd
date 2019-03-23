@@ -1,5 +1,3 @@
-// Game is too generic, rename to KnightObserver
-
 let knightPosition = [1, 7];
 let observer = null;
 
