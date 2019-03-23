@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import Board from "./chess-board/Board";
+// Game is too generic, rename to KnightObserver
 
 let knightPosition = [1, 7];
-
 let observer = null;
 
 // wrap entire app in an observer to subscribe to a changing state in the most minimal, non-complex way (rather than using EventEmitter or making Game an object model), all that is needed in this case is a stream of values
@@ -10,8 +8,14 @@ export const observe = o => {
   if (observer) {
     throw new Error("Multiple observers not implemented.");
   }
+
   observer = o;
   emitChange();
+
+  // TO-DO: explore purpose of this return statement
+  return () => {
+    observer = null;
+  }
 };
 
 const emitChange = () => {
@@ -32,15 +36,3 @@ export const moveKnight = (toX, toY) => {
   knightPosition = [toX, toY];
   emitChange();
 };
-
-class Game extends Component {
-  render() {
-    return (
-      <div>
-        {/* <Board knightPosition={knightPosition} /> */}
-      </div>
-    );
-  }
-}
-
-export default Game;
