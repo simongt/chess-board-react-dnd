@@ -1,6 +1,8 @@
 import React from "react";
 import SquareWrapper from "./SquareWrapper";
 import Knight from "../pieces/Knight";
+import { DragDropContextProvider } from "react-dnd";
+import HTML5Backend from "react-dnd-html5-backend";
 
 // chess board component
 const Board = ({ knightPosition: [knightX, knightY] }) => {
@@ -26,7 +28,7 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
         </SquareWrapper>
       </div>
     );
-  };
+  }
 
   // check if square contains knight piece
   // if square contains knight piece, render it out
@@ -40,7 +42,9 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
     squares.push(renderSquare(i));
   }
   return (
-    <div style={boardStyle}>{squares}</div>
+    <DragDropContextProvider backend={HTML5Backend}>
+      <div style={boardStyle}>{squares}</div>
+    </DragDropContextProvider>
   );
 }
 
