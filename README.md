@@ -91,6 +91,35 @@ In React DnD, DragSource and DropTarget, as well as a few other top-level export
 
 ---
 
+# Infrastructure
+
+The project's `src` structure and a brief description of each file.
+
+```
+src
+├── App.jsx                     # wraps the board component with an observer
+├── components
+│   ├── board
+│   │   ├── Board.jsx           # renders an 8x8 board component
+│   │   ├── Square.jsx          # renders square and children on it (e.g. knight)
+│   │   └── SquareWrapper.jsx   # handles drag-and-drop logic for moving piece
+│   ├── constants
+│   │   └── ItemTypes.js        # constants for the draggable item types
+│   ├── layout
+│   │   ├── Footer.jsx
+│   │   └── Header.jsx
+│   ├── pieces
+│   │   └── Knight.jsx          # uses unicode knight to render a chess piece
+│   └── util
+│       ├── KnightObserver.js   # manages game state, updates knight position
+│       └── Overlay.jsx         # highlights squares for possible moves
+├── index.js                    # defines the app's entry point
+├── lib
+│   └── withDragDropContext.js  # initializes a single DragDropContext instance
+└── stylesheets
+    └── global.css              # normalizes some styling
+```
+
 # Dependencies
 
 | API | Description |

@@ -39,7 +39,7 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
     <div style={boardStyle}>{squares}</div>
   );
 
-  // CRITICAL NOTE: the bottom return statement produces an error: "Cannot have two HTML backends at the same time".
+  // CRITICAL NOTE: the bottom return statement would produce the error: "Cannot have two HTML backends at the same time".
 
   // return (
   //   <DragDropContextProvider backend={HTML5Backend}>
