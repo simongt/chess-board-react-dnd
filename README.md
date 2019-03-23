@@ -1,6 +1,6 @@
-# React Drag & Drop: Chess Board
+# Chess Board Demo (React DnD)
 
-| In this React project, I explore the drag-and-drop capabilities of <a href="http://react-dnd.github.io/react-dnd">React DnD</a> while using CSS Grid to build a simplified chess board containing a single set of pieces. |
+| In this React project, I explore the drag-and-drop capabilities of <a href="http://react-dnd.github.io/react-dnd">React DnD</a> while using Flexbox to build a simplified chess board containing a single set of pieces. |
 |:-|
 
 <details>
@@ -16,6 +16,8 @@ This app was initially inspired by and adapted from <a href="http://react-dnd.gi
 
 ---
 
+# Analysis
+
 ## Identify components and consider props.
 
 | Components | Description | Props |
@@ -28,11 +30,64 @@ This app was initially inspired by and adapted from <a href="http://react-dnd.gi
 
 If it can be helped, not `Board`. It's a good idea to have as little state in components as possible. Since `Board` will already have some layout logic, it's best to not burden it with managing state. However, for this simple demo, it's rather trivial at this point. Let's assume state exists *somewhere* and think about it later. Meanwhile, let's make sure the components render correctly when they receive said state via props.
 
-### Add the state.
-
 The goal is to make `Knight` draggable. This requires maintaining `knightPosition` in some kind of state storage and having some way to update it.
 
 React is not opinionated about the state management or the data flow (e.g. Flux, Redux, Rx).
+
+---
+
+# Overview
+
+React DnD uses Redux internally, so it shouldn't be a coincidence that its underlying concepts resemble its architecture.
+
+## Backends
+
+**React DnD is built on top of the HTML5 drag-and-drop API.**
+
+Pro: no need to *draw* as the cursor moves, "drag preview" works out of the box.
+Con: no built-in touch screen support.
+
+**Backends abstract away the browser differences and process the native DOM events.**
+
+The backends perform a similar role to that of React's synthetic event system: they abstract away the browser differences and process the native DOM events. Despite the similarities, React DnD backends do not have a dependency on React or its synthetic event system. Under the hood, all the backends do is translate the DOM events into the internal Redux actions that React DnD can process.
+
+## Items + Types
+
+**The types let you specify which drag sources and drop targets are compatible.**
+
+React DnD uses data, and not the views, as the source of truth. When you drag something across the screen, we don't say that a component, or a DOM node is being dragged. Instead, we say that an item of a certain type is being dragged. Describing the dragged data as a plain object helps you keep the components decoupled and unaware of each other.
+
+Types are useful because, as your app grows, you might want to make more things draggable, but you don't necessarily want all the existing drop targets to suddenly start reacting to the new items.
+
+## Monitors
+
+**The monitors let you update the props of your components in response to the drag and drop state changes.**
+
+Drag and drop is inherently stateful. Either a drag operation is in progress, or it isn't. Either there is a current type and a current item, or there isn't. This state has to live somewhere. React DnD exposes this state to your components via a few tiny wrappers over the internal state storage called the monitors.
+
+For each component that needs to track the drag and drop state, you can define a collecting function that retrieves the relevant bits of it from the monitors. React DnD then takes care of timely calling your collecting function and merging its return value into your components' props.
+
+## Connectors
+
+**The connectors let you assign one of the predefined roles (a drag source, a drag preview, or a drop target) to the DOM nodes in your render function.**
+
+If the backend handles the DOM events, but the components use React to describe the DOM, how does the backend know which DOM nodes to listen to? Enter the connectors.
+
+## Drag Sources and Drop Targets
+
+**Drag sources and drop targets are the primary abstraction units of React DnD, i.e. they really tie the types, the items, the side effects, and the collecting functions together with your components.**
+
+Whenever you want to make a component or some part of it draggable, you need to wrap that component into a drag source declaration. Every drag source is registered for a certain type, and has to implement a method producing an item from the component's props. It can also optionally specify a few other methods for handling the drag and drop events. The drag source declaration also lets you specify the collecting function for the given component.
+
+The drop targets are very similar to the drag sources. The only difference is that a single drop target may register for several item types at once, and instead of producing an item, it may handle its hover or drop.
+
+## Higher-Order Components and Decorators
+
+**A higher-order component is just a function that takes a React component class, and returns another React component class.**
+
+The wrapping component provided by the library renders your component in its render method and forwards the props to it, but also adds some useful behavior.
+
+In React DnD, DragSource and DropTarget, as well as a few other top-level exported functions, are in fact higher-order components. They breathe the drag and drop magic into your components.
 
 ---
 
