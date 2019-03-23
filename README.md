@@ -1,4 +1,4 @@
-# Chess Board Demo (React DnD)
+# Chess Board (React Drag & Drop)
 
 | In this React project, I explore the drag-and-drop capabilities of <a href="http://react-dnd.github.io/react-dnd">React DnD</a> while using Flexbox to build a simplified chess board containing a single set of pieces. |
 |:-|
@@ -16,17 +16,17 @@ This app was initially inspired by and adapted from <a href="http://react-dnd.gi
 
 ---
 
-# Analysis
+## Chess Board Pre-Analysis
 
-## Identify components and consider props.
+### Identify components and consider props.
 
 | Components | Description | Props |
 |:-|:-|:-|
-| **`Knight`** (class) | A single knight piece. | Probably needs no props. There's no need for it to be aware of its own position since it'll be placed into `Square` as a child. |
-| **`Square`** (functional) | A single square on the board. | Probably just **`color`** (alternating in white and black), as it is the only value needed for rendering. It's not necessary to give position via props.
-| **`Board`** (functional) | The entire 8x8 board with 64 total squares. | `Board` only consists of `Square` components, therefore instead of passing `Square` components to `Board` as children, `Board` would probably just own them. This means `Board` would then need `Knight`'s **current position**, a two-item array with a column (**`x`**) and row (**`y`**) position. |
+| **`Knight`** | A single knight piece. | Probably needs no props. There's no need for it to be aware of its own position since it'll be placed into `Square` as a child. |
+| **`Square`** | A single square on the board. | Probably just **`color`** (alternating in white and black), as it is the only value needed for rendering. It's not necessary to give position via props.
+| **`Board`** | The entire 8x8 board with 64 total squares. | `Board` only consists of `Square` components, therefore instead of passing `Square` components to `Board` as children, `Board` would probably just own them. This means `Board` would then need `Knight`'s **current position**, a two-item array with a column (**`x`**) and row (**`y`**) position. |
 
-### Where will the current state live?
+#### Where will the current state live?
 
 If it can be helped, not `Board`. It's a good idea to have as little state in components as possible. Since `Board` will already have some layout logic, it's best to not burden it with managing state. However, for this simple demo, it's rather trivial at this point. Let's assume state exists *somewhere* and think about it later. Meanwhile, let's make sure the components render correctly when they receive said state via props.
 
@@ -36,7 +36,7 @@ React is not opinionated about the state management or the data flow (e.g. Flux,
 
 ---
 
-# Overview
+# React DnD Overview
 
 React DnD uses Redux internally, so it shouldn't be a coincidence that its underlying concepts resemble its architecture.
 
