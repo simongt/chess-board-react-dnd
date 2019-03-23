@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Board from "./components/board/Board";
 import { observe } from "./components/util/KnightObserver";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import "./stylesheets/global.css";
 
 // Chess Board Demo
@@ -14,8 +16,28 @@ const App = () => {
     )
   );
   return (
-    <div>
-      <Board knightPosition={knightPosition} />      
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "grid",
+        gridTemplateRows: "8rem 1fr 2rem",
+        overflow: "hidden"
+      }}
+    >
+      <Header />
+      <div
+        style={{
+          display: "grid",
+          justifyContent: "center",
+          alignContent: "center",
+          justifyItems: "center",
+          alignItems: "center",
+        }}
+      >
+        <Board knightPosition={knightPosition} />
+      </div>
+      <Footer />
     </div>
   );
 }
