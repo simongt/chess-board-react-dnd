@@ -47,7 +47,7 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
   //   </DragDropContextProvider>
   // );
 
-  // Need to use the singleton pattern to ensure only a single instance of DragDropContext is initialised throughout app. Credit fix to @gcorne, https://github.com/react-dnd/react-dnd/issues/186#issuecomment-282789420, and @nickangtc for courteously sharing this fix: https://github.com/react-dnd/react-dnd/issues/740#issuecomment-299686690. 
+  // Need to use the singleton pattern to ensure only a single instance of DragDropContext is initialized throughout app. Credit fix to @gcorne, https://github.com/react-dnd/react-dnd/issues/186#issuecomment-282789420, and @nickangtc for courteously sharing this fix: https://github.com/react-dnd/react-dnd/issues/740#issuecomment-299686690. 
 }
 
 // styling properties applied to the board element
