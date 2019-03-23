@@ -25,7 +25,6 @@ const collect = (connect, monitor) => ({
 
 class SquareWrapper extends Component {
   render() {
-    console.log("SquareWrapper --> render");
     const { x, y, connectDropTarget, isOver, canDrop, children } = this.props;
     // alternate square colors, determine if it is black or white by its position
     const squareIsBlack = (x + y) % 2 === 1;

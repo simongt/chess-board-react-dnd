@@ -1,28 +1,22 @@
 import React from "react";
 import SquareWrapper from "./SquareWrapper";
 import Knight from "../pieces/Knight";
-import { DragDropContextProvider } from "react-dnd";
-import HTML5Backend from "react-dnd-html5-backend";
+import withDragDropContext from "../../lib/withDragDropContext";
 
 // chess board component
 const Board = ({ knightPosition: [knightX, knightY] }) => {
-  console.log("Board --> render");
-  console.log(`{ knightPosition: [${knightX}, ${knightY}] }`);
 
-  // generate "smart" squares
+  // generate "smart" squares (aware of piece's position)
   const renderSquare = (i) => {
-    console.log(`Board --> render --> renderSquare(${i})`);
     
     // i: board position, x: column, y: row
     const x = i % 8;
     const y = Math.floor(i / 8);
     const piece = renderPiece(x, y);
-    console.log(piece);
     
     // render out the square
     return (
       <div key={i} style={squareStyle}>
-        {/* Can't get any of the squares to render */}
         <SquareWrapper x={x} y={y}>
           {piece}
         </SquareWrapper>
@@ -42,10 +36,18 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
     squares.push(renderSquare(i));
   }
   return (
-    <DragDropContextProvider backend={HTML5Backend}>
-      <div style={boardStyle}>{squares}</div>
-    </DragDropContextProvider>
+    <div style={boardStyle}>{squares}</div>
   );
+
+  // CRITICAL NOTE: the bottom return statement produces an error: "Cannot have two HTML backends at the same time".
+
+  // return (
+  //   <DragDropContextProvider backend={HTML5Backend}>
+  //     <div style={boardStyle}>{squares}</div>
+  //   </DragDropContextProvider>
+  // );
+
+  // Need to use the singleton pattern to ensure only a single instance of DragDropContext is initialised throughout app. Credit fix to @gcorne, https://github.com/react-dnd/react-dnd/issues/186#issuecomment-282789420, and @nickangtc for courteously sharing this fix: https://github.com/react-dnd/react-dnd/issues/740#issuecomment-299686690. 
 }
 
 // styling properties applied to the board element
@@ -65,4 +67,4 @@ const squareStyle = {
   height: "12.5%",
 };
 
-export default Board;
+export default withDragDropContext(Board);
