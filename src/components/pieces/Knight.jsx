@@ -18,7 +18,6 @@ const collect = (connect, monitor) => ({
 
 class Knight extends Component {
   render() {
-    console.log("Knight --> render");
     const {
       connectDragSource,
       // connectDragPreview,

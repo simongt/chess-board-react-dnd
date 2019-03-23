@@ -1,8 +1,6 @@
 import React from "react";
 
 export const Square = ({ squareIsBlack, children }) => {
-  console.log("Square --> render");
-  console.log(children);
   const fill = squareIsBlack ? "black" : "white";
   const stroke = squareIsBlack ? "white" : "black";
   const squareStyle = {
