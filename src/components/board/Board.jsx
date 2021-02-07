@@ -52,19 +52,36 @@ const Board = ({ knightPosition: [knightX, knightY] }) => {
 
 // styling properties applied to the board element
 const boardStyle = {
-  margin: "0 auto",
-  width: "100vmin",
-  height: "100vmin",
-  display: "flex",
-  flexWrap: "wrap",
-  fontSize: "10vmin",
+  // fontSize: "4rem",
+  fontSize: "6vmin",
   border: "1px solid black",
+  padding: "0.5rem",
+  width: "80vmin",
+  height: "80vmin",
+  display: "grid",
+  gridGap: "0",
+  gridTemplateColumns: "repeat(8, 1fr)",
+  gridTemplateRows: "repeat(8, 1fr)",
+  gridAutoFlow: "row"
 };
+// const boardStyle = {
+//   margin: "0 auto",
+//   width: "100vmin",
+//   height: "100vmin",
+//   display: "flex",
+//   flexWrap: "wrap",
+//   fontSize: "10vmin",
+//   border: "1px solid black",
+// };
 
 // styling properties applied to each square element
 const squareStyle = {
-  width: "12.5%",
-  height: "12.5%",
+  width: "100%",
+  height: "100%",
 };
+// const squareStyle = {
+//   width: "12.5%",
+//   height: "12.5%",
+// };
 
 export default withDragDropContext(Board);
